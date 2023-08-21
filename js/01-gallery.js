@@ -30,14 +30,9 @@ gallery.addEventListener('click', e => {
   e.preventDefault();
   if (e.target.classList.contains('gallery__image')) {
     const source = e.target.getAttribute('data-source');
-    const instance = basicLightbox.create(`
-      <img src="${source}" alt="${e.target.alt}">
-    `);
-    instance.show();
+    basicLightbox.create(`
+<img width= "1400" height= "900" src= "https:placehold.it/1400x900">`)
+.show();
   }
 });
 console.log(galleryItems);
-
-basicLightbox.create(`
-<img width= "1400" height= "900" src= "https:placehold.it/1400x900">`)
-.show();
