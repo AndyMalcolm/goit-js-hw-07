@@ -36,3 +36,4 @@ gallery.addEventListener('click', e => {
   }
 });
 console.log(galleryItems);
+// переписать код с видео
