@@ -4,7 +4,6 @@ import { galleryItems } from './gallery-items.js';
 console.log(galleryItems);
 
 // кoд с 1 задания
-import { galleryItems } from './gallery-items.js';
 const gallery = document.querySelector('.gallery');
 
 function createGalleryItem(item) {
@@ -39,4 +38,3 @@ gallery.addEventListener('click', e => {
 .show();
   }
 });
-console.log(galleryItems);
