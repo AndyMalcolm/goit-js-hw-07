@@ -4,7 +4,7 @@ import { galleryItems } from './gallery-items.js';
 console.log(galleryItems);
 
 // кoд с 1 задания
-const gallery = document.querySelector('.gallery');
+  const gallery = document.querySelector('.gallery');
 
 function createGalleryItem(item) {
   const galleryItem = document.createElement('li');
