@@ -51,8 +51,14 @@ function closeModalOnEscape(e) {
     activeModal.close();
     activeModal = null;
 
-    document.removeEventListener('keydown', closeModalOnEscape);
+    window.removeEventListener('keydown', closeModalOnEscape);
   }
 }
-// переписать код с видео
-// эт0 исправить
+const instance = basicLightbox.create(html, {
+  onShow: (instance) => {
+    window.addEventListener('keydown', closeModalOnEscape);
+  },
+  onClose: (instance) => {
+    window.removeEventListener('keydown', closeModalOnEscape);
+  }
+});
