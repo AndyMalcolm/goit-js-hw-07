@@ -29,15 +29,6 @@ function createGalleryItem(item) {
 const galleryItemsMarkup = galleryItems.map(item => createGalleryItem(item));
 gallery.append(...galleryItemsMarkup);
 
-gallery.addEventListener('click', e => {
-  e.preventDefault();
-  if (e.target.classList.contains('gallery__image')) {
-    const source = e.target.dataset.source;//e.target.getAttribute('data-source')
-    basicLightbox.create(`
-<img width= "1400" height= "900" src= "${source}">`)
-.show();
-  }
-});
 const lightbox = new SimpleLightbox('.gallery a.gallery__link', {
   captionsData: "alt",
   captionDelay: 250,
