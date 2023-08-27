@@ -28,6 +28,7 @@ gallery.append(...galleryItemsMarkup);
 
 let activeModal = null;
 
+//тут исправить
 gallery.addEventListener('click', e => {
   e.preventDefault();
   if (e.target.classList.contains('gallery__image')) {
@@ -53,3 +54,22 @@ function closeModalOnEscape(e) {
   }
 }
 // переписать код с видео
+// эт0 исправить
+gallery.addEventListener('click', e => {
+  e.preventDefault();
+  if (e.target.tagName !== 'IMG') {
+    return;
+  }
+
+  const source = e.target.dataset.source;
+  const modal = basicLightbox.create(`
+    <img width="1400" height="900" src="${source}">
+  `);
+
+  activeModal = modal;
+
+  modal.show();
+
+  window.addEventListener('keydown', closeModalOnEscape);
+});
+
