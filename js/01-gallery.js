@@ -62,3 +62,9 @@ const instance = basicLightbox.create(html, {
     window.removeEventListener('keydown', closeModalOnEscape);
   }
 });
+gallery.addEventListener('click', e => {
+  e.preventDefault();
+  if (e.target.tagName !== 'IMG') {
+    return;
+  }
+});
