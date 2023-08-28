@@ -26,7 +26,7 @@ function createGalleryItem(item) {
   return galleryItem;
 }
 
-const galleryItemsMarkup = galleryItems.map(item => createGalleryItem(item));
+const galleryItemsMarkup = galleryItems.map(createGalleryItem);
 gallery.append(...galleryItemsMarkup);
 
 const lightbox = new SimpleLightbox('.gallery a.gallery__link', {
